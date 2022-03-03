@@ -1,0 +1,10 @@
+{%extends 'base.html' %}
+
+{% block content %}
+    <h3>welcome to our website</h3>
+    <p>The meetings are</p>
+    {% for meeting in meetings %}
+        <a href="/meeting/{{meeting.id}}">{{meeting.title}}</a>
+    {% endfor %}
+    <a href="/rooms"> Rooms</a>
+{% endblock %}
